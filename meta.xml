@@ -1,0 +1,31 @@
+<meta>
+
+	<info name="mprometheus" version="1.0.0" author="matran/rifleh" type="script" />
+
+	<script src="metrics/p_metrics.lua" type="server"/>
+	<script src="metrics/p_counter.lua" type="server"/>
+	<script src="metrics/p_gauge.lua" type="server"/>
+	<script src="metrics/p_summary.lua" type="server"/>
+
+	<script src="p_event_packet_usage.lua" type="server" />
+	<script src="p_lua_memory.lua" type="server" />
+	<script src="p_lua_timing.lua" type="server" />
+	<script src="p_network.lua" type="server" />
+	<script src="p_packet_usage.lua" type="server" />
+	<script src="p_proc_mem.lua" type="server" />
+	<script src="p_resources.lua" type="server" />
+	<script src="p_server_info.lua" type="server" />
+
+	<export function="metrics" http="true" router="true"/>
+
+	<export function="registerCounter" type="server"/>
+	<export function="addCounterValue" type="server"/>
+	<export function="setCounterValue" type="server"/>
+
+	<export function="registerGauge" type="server"/>
+	<export function="setGaugeValue" type="server"/>
+
+	<export function="registerSummary" type="server"/>
+	<export function="addSummaryValue" type="server"/>
+
+</meta>
