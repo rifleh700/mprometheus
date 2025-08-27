@@ -55,10 +55,10 @@ scrape_configs:
     - find file `MTA_Server_Grafana.json` in `mprometheus` resource [(or just download it separately)](https://raw.githubusercontent.com/rifleh700/mprometheus/refs/heads/main/MTA_Server_Grafana.json) and choose it
 
 ## Exported server-side function
-- registerCounter
-- addCounterValue
-- setCounterValue
-- registerGauge
-- setGaugeValue
-- registerSummary
-- addSummaryValue
+- `boolean registerCounter(string name [, string description])`
+- `boolean registerGauge(string name [, string description])`
+- `boolean registerSummary(string name [, string description])`
+- `boolean addCounterValue(string name, float value [, table labels])`
+- `boolean setCounterValue(string name, float value [, table labels])`
+- `boolean setGaugeValue(string name, float value [, table labels])`
+- `boolean addSummaryValue(string name, float value [, table labels])`
