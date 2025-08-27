@@ -1,4 +1,4 @@
-local INTERVAL = 5000
+local INTERVAL = 10000
 
 registerGauge("process_memory_usage_bytes", "Breakdown of the process memory usage")
 

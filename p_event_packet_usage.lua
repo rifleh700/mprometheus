@@ -1,4 +1,4 @@
-local INTERVAL = 5000
+local INTERVAL = 10000
 
 registerGauge("event_packet_usage_messages")
 

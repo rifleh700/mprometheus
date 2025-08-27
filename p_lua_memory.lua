@@ -1,4 +1,4 @@
-local INTERVAL = 5000
+local INTERVAL = 10000
 
 registerGauge("lua_memory_usage", "Current memory usage")
 registerGauge("lua_memory_events_total", "How many event created")

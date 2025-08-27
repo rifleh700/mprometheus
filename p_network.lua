@@ -1,4 +1,4 @@
-local INTERVAL = 5000
+local INTERVAL = 10000
 
 registerCounter("network_received_bytes", "Total number of bytes received since the connection was started")
 registerCounter("network_sent_bytes", "Total number of bytes sent since the connection was started")

@@ -1,4 +1,4 @@
-local INTERVAL = 5000
+local INTERVAL = 10000
 
 registerGauge("packet_usage_incoming_messages", "Incoming messages per second")
 registerGauge("packet_usage_incoming_bytes", "Incoming bytes per second")
