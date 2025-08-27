@@ -52,7 +52,7 @@ scrape_configs:
 12. Go home and press `Create your first dashboard`
     - `Import dashboard` (discard)
     - `Upload dashboard JSON file`
-    - find file `MTA_Server_Grafana.json` in `mprometheus` resource (or just download it separately) and choose it
+    - find file `MTA_Server_Grafana.json` in `mprometheus` resource [(or just download it separately)](https://raw.githubusercontent.com/rifleh700/mprometheus/refs/heads/main/MTA_Server_Grafana.json) and choose it
 
 ## Exported server-side function
 - registerCounter
