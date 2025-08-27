@@ -1,9 +1,8 @@
-
 local INTERVAL = 10000
 
 local function registerServerInfo(stats)
 
-	setGaugeValue("server_info", 1, {platform = stats[1][2], version = stats[2][2], min_client_version = stats[1][6]})
+	setGaugeValue("server_info", 1, { platform = stats[1][2], version = stats[2][2], min_client_version = stats[1][6] })
 	return true
 end
 

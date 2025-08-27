@@ -81,7 +81,6 @@ function addMetricValue(kind, name, raw_name, labels, value)
 	return key_data.value
 end
 
-
 local function serialize_labels(labels)
 	if (not labels) or next(labels) == nil then
 		return ''

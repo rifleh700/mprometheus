@@ -1,4 +1,3 @@
-
 local INTERVAL = 5000
 
 registerGauge("packet_usage_incoming_messages", "Incoming messages per second")
@@ -39,12 +38,12 @@ end
 local function collectPacketUsage()
 
 	for packet_type, _ in ipairs(packet_types) do
-		setGaugeValue("packet_usage_incoming_messages", 0, {packet_type = packet_type})
-		setGaugeValue("packet_usage_incoming_bytes", 0, {packet_type = packet_type})
-		setGaugeValue("packet_usage_incoming_cpu_usage", 0, {packet_type = packet_type})
-		setGaugeValue("packet_usage_outgoing_messages", 0, {packet_type = packet_type})
-		setGaugeValue("packet_usage_outgoing_bytes", 0, {packet_type = packet_type})
-		setGaugeValue("packet_usage_outgoing_messages_share", 0, {packet_type = packet_type})
+		setGaugeValue("packet_usage_incoming_messages", 0, { packet_type = packet_type })
+		setGaugeValue("packet_usage_incoming_bytes", 0, { packet_type = packet_type })
+		setGaugeValue("packet_usage_incoming_cpu_usage", 0, { packet_type = packet_type })
+		setGaugeValue("packet_usage_outgoing_messages", 0, { packet_type = packet_type })
+		setGaugeValue("packet_usage_outgoing_bytes", 0, { packet_type = packet_type })
+		setGaugeValue("packet_usage_outgoing_messages_share", 0, { packet_type = packet_type })
 	end
 
 	local columns, lua_packet_rows = getPerformanceStats("Packet usage")
@@ -54,12 +53,12 @@ local function collectPacketUsage()
 		if packet_type == "Sampling... Please wait" then return end
 
 		packet_types[packet_type] = true
-		setGaugeValue("packet_usage_incoming_messages", format(data[2]), {packet_type = packet_type})
-		setGaugeValue("packet_usage_incoming_bytes", format_bytes(data[3]), {packet_type = packet_type})
-		setGaugeValue("packet_usage_incoming_cpu_usage", format_percent(data[4]), { packet_type = packet_type})
-		setGaugeValue("packet_usage_outgoing_messages", format(data[5]), {packet_type = packet_type})
-		setGaugeValue("packet_usage_outgoing_bytes", format_bytes(data[6]), {packet_type = packet_type})
-		setGaugeValue("packet_usage_outgoing_messages_share", format_percent(data[7]), { packet_type = packet_type})
+		setGaugeValue("packet_usage_incoming_messages", format(data[2]), { packet_type = packet_type })
+		setGaugeValue("packet_usage_incoming_bytes", format_bytes(data[3]), { packet_type = packet_type })
+		setGaugeValue("packet_usage_incoming_cpu_usage", format_percent(data[4]), { packet_type = packet_type })
+		setGaugeValue("packet_usage_outgoing_messages", format(data[5]), { packet_type = packet_type })
+		setGaugeValue("packet_usage_outgoing_bytes", format_bytes(data[6]), { packet_type = packet_type })
+		setGaugeValue("packet_usage_outgoing_messages_share", format_percent(data[7]), { packet_type = packet_type })
 	end
 
 	return true

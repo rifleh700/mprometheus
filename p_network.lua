@@ -1,4 +1,3 @@
-
 local INTERVAL = 5000
 
 registerCounter("network_received_bytes", "Total number of bytes received since the connection was started")
@@ -15,8 +14,8 @@ local function collectNetworkStats()
 	local stats = getNetworkStats()
 	setCounterValue("network_received_bytes", stats.bytesReceived)
 	setCounterValue("network_sent_bytes", stats.bytesSent)
-	setCounterValue("network_received_packets", stats.packetsReceived )
-	setCounterValue("network_sent_packets", stats.packetsSent )
+	setCounterValue("network_received_packets", stats.packetsReceived)
+	setCounterValue("network_sent_packets", stats.packetsSent)
 	setGaugeValue("network_packet_loss_total", stats.packetlossTotal)
 	setGaugeValue("network_packet_loss_last_second", stats.packetlossLastSecond)
 	setGaugeValue("network_send_buffer_messages", stats.messagesInSendBuffer)

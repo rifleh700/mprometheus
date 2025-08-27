@@ -1,4 +1,3 @@
-
 local INTERVAL = 5000
 
 registerGauge("lua_timing_cpu_usage", "CPU usage in the last 5 seconds")

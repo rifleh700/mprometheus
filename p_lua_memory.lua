@@ -1,4 +1,3 @@
-
 local INTERVAL = 5000
 
 registerGauge("lua_memory_usage", "Current memory usage")
@@ -28,10 +27,10 @@ end
 local function collectLuaMemory()
 
 	for resource_name, _ in pairs(resources) do
-		setGaugeValue("lua_memory_usage", 0, {resource = resource_name})
-		setGaugeValue("lua_memory_events_total", 0, {resource = resource_name})
-		setGaugeValue("lua_memory_timers_total", 0, {resource = resource_name})
-		setGaugeValue("lua_memory_elements_total", 0, {resource = resource_name})
+		setGaugeValue("lua_memory_usage", 0, { resource = resource_name })
+		setGaugeValue("lua_memory_events_total", 0, { resource = resource_name })
+		setGaugeValue("lua_memory_timers_total", 0, { resource = resource_name })
+		setGaugeValue("lua_memory_elements_total", 0, { resource = resource_name })
 	end
 
 	local columns, lua_memory_rows = getPerformanceStats("Lua memory")
@@ -39,10 +38,10 @@ local function collectLuaMemory()
 		local resource_name = data[1]
 		if resource_name ~= "" then
 			resources[resource_name] = true
-			setGaugeValue("lua_memory_usage", format_bytes(data[3]), {resource = resource_name})
-			setGaugeValue("lua_memory_events_total", format(data[7]), {resource = resource_name})
-			setGaugeValue("lua_memory_timers_total", format(data[8]), {resource = resource_name})
-			setGaugeValue("lua_memory_elements_total", format(data[9]), {resource = resource_name})
+			setGaugeValue("lua_memory_usage", format_bytes(data[3]), { resource = resource_name })
+			setGaugeValue("lua_memory_events_total", format(data[7]), { resource = resource_name })
+			setGaugeValue("lua_memory_timers_total", format(data[8]), { resource = resource_name })
+			setGaugeValue("lua_memory_elements_total", format(data[9]), { resource = resource_name })
 		end
 	end
 

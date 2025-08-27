@@ -1,4 +1,3 @@
-
 local INTERVAL = 30000
 
 local function collectResourcesState()
