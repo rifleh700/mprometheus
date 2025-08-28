@@ -1,6 +1,7 @@
 <meta>
 
 	<info name="mprometheus" version="1.2.0" author="matran/rifleh" type="script"/>
+	<min_mta_version server="1.6.0-9.22639.0" />
 
 	<script src="metrics/p_metrics.lua" type="server"/>
 	<script src="metrics/p_counter.lua" type="server"/>

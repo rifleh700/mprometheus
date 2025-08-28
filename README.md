@@ -1,6 +1,9 @@
 # mprometheus
 MTA:SA metrics system + prometheus exporter
 
+> [!IMPORTANT]  
+> Minimum MTA server version is **1.6.0 r22639** since resource uses `router` http function
+
 ![screenshot](https://i.imgur.com/4GW5wfz.png)
 
 ## Quick start
