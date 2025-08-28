@@ -9,9 +9,18 @@ local function format_bytes(v)
 	return v
 end
 
-local function registerServerInfo(stats)
+local function collectServerInfo(stats)
 
-	setGaugeValue("server_info", 1, { platform = stats[1][2], version = stats[2][2], min_client_version = stats[1][6] })
+	removeGauge("server_info")
+	setGaugeValue("server_info", 1,
+		{
+			server_name = getServerName(),
+			game_mode = getGameType() or "MTA:SA",
+			platform = stats[1][2],
+			version = stats[2][2],
+			min_client_version = stats[1][6]
+		})
+
 	return true
 end
 
@@ -78,7 +87,6 @@ end
 local function registerAllServerInfo()
 
 	local columns, stats = getPerformanceStats("Server info")
-	registerServerInfo(stats)
 	registerServerStartTimestamp(stats)
 	return true
 end
@@ -86,6 +94,7 @@ end
 local function collectAllServerInfo()
 
 	local columns, stats = getPerformanceStats("Server info")
+	collectServerInfo(stats)
 	collectServerFps(stats)
 	collectPlayers(stats)
 	collectCpuUsage(stats)

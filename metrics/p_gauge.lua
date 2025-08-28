@@ -5,6 +5,11 @@ function registerGauge(name, description)
 	return registerMetric(KIND, name, description)
 end
 
+function removeGauge(name)
+
+	return removeMetric(KIND, name)
+end
+
 function setGaugeValue(name, value, labels)
 
 	return setMetricValue(KIND, name, name, labels, value)

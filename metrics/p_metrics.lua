@@ -14,6 +14,18 @@ function registerMetric(kind, name, description)
 	return true
 end
 
+function removeMetric(kind, name)
+
+	local found = items[name]
+	if not found then return false end
+
+	if found.kind ~= kind then return false end
+
+	items[name] = nil
+
+	return true
+end
+
 local function buildLabelsKey(labels)
 
 	if not labels then return "" end

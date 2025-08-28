@@ -1,6 +1,6 @@
 <meta>
 
-	<info name="mprometheus" version="1.1.0" author="matran/rifleh" type="script"/>
+	<info name="mprometheus" version="1.2.0" author="matran/rifleh" type="script"/>
 
 	<script src="metrics/p_metrics.lua" type="server"/>
 	<script src="metrics/p_counter.lua" type="server"/>
