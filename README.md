@@ -57,6 +57,7 @@ scrape_configs:
 ## Exported server-side function
 - `boolean registerCounter(string name [, string description])`
 - `boolean registerGauge(string name [, string description])`
+- `boolean removeGauge(string name)`
 - `boolean registerSummary(string name [, string description])`
 - `boolean addCounterValue(string name, float value [, table labels])`
 - `boolean setCounterValue(string name, float value [, table labels])`
