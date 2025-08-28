@@ -1,7 +1,7 @@
 # mprometheus
 MTA:SA metrics system + prometheus exporter
 
-![screenshot](https://i.imgur.com/qSKY0Sj.png)
+![screenshot](https://i.imgur.com/4GW5wfz.png)
 
 ## Quick start
 1. Download Prometheus [(link)](https://prometheus.io/download/) and unpack ZIP
